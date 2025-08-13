@@ -16,6 +16,7 @@ namespace App.BlogApi.Controllers
         {
             return Ok(_articles);
         }
+
         [HttpGet("{id}")]
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -32,7 +33,7 @@ namespace App.BlogApi.Controllers
             }
 
         }
-        [HttpPost("add-article")]
+        [HttpPost("add-article")]  // postman kullanırken belli olsun diye görevdekinden başka endpoint kullandım
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [Consumes("application/json")]
@@ -55,7 +56,7 @@ namespace App.BlogApi.Controllers
 
         }
 
-        [HttpPut("update/{id}")]
+        [HttpPut("update/{id}")]  // postman kullanırken belli olsun diye görevdekinden başka endpoint kullandım
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         [ProducesResponseType(StatusCodes.Status404NotFound)]
@@ -80,7 +81,7 @@ namespace App.BlogApi.Controllers
             }
         }
 
-        [HttpDelete("delete/{id}")]
+        [HttpDelete("delete/{id}")] // postman kullanırken belli olsun diye görevdekinden başka endpoint kullandım
         [ProducesResponseType(StatusCodes.Status200OK)]
         [ProducesResponseType(StatusCodes.Status204NoContent)]
 
